@@ -1,0 +1,84 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="56690C84-3EB8-4B75-0700-4CBA0C8CD2E6" name="pacienti">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:18:43 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pac" id="B4A9D0F3-5183-FAD3-5DED-EC959353CB81">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:18:56 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="jmeno" id="EB4471F2-FFCE-058F-BA0E-B553BC5D0F62">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:19:08 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="prijm" id="076DA789-5855-794B-4AB7-475A12FAB338">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:19:42 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT037</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rod_cis" id="F6FFE958-3B33-0D48-23EF-D12686E434B5">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:20:19 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>11</dataTypeSize>
+<ownDataTypeParameters>11,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="CFDAB7B1-351D-2E49-51E5-AB739C427573" name="pacienti PK">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:19:02 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B4A9D0F3-5183-FAD3-5DED-EC959353CB81</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

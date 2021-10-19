@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pacienti_zazn_diag" directorySegmentName="seg_0" id="CB79F8FC-BFB8-6D66-F93D-3F6D8F3D1C77">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:50:11 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<sourcePk>CFDAB7B1-351D-2E49-51E5-AB739C427573</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>56690C84-3EB8-4B75-0700-4CBA0C8CD2E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>92B7D953-36DD-CB56-68E4-F83277F23C97</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

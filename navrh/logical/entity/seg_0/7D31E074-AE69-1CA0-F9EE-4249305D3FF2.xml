@@ -1,0 +1,111 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7D31E074-AE69-1CA0-F9EE-4249305D3FF2" name="zdrav_pojisteni">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:26:50 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pstky" id="A47B7351-6465-D2C9-5D31-1071E8A4BD3E">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:26:57 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum_od" id="E9811744-111F-C858-7492-FF6857573E69">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:27:09 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum_do" id="19858D70-0FE6-B3D6-DF63-62F587FD0228">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:27:44 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cis_pojistence" id="D38A0781-C881-3F2C-816B-FFFE147168B3">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:47:39 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pac" id="5C064809-3F49-D78C-08B3-41EAE4209EA9">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:31:27 UTC</createdTime>
+<generatorID>A9E212CA-57F9-270B-D280-C969E6AA32B0</generatorID>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<referedAttribute>B4A9D0F3-5183-FAD3-5DED-EC959353CB81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pvny" id="4931AD1A-9251-6A6B-C2A9-F746DD582E5F">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:32:36 UTC</createdTime>
+<generatorID>F5D2FEBE-F59C-3746-2C56-B8309C3BD89C</generatorID>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<referedAttribute>0CAA05FC-3612-657D-D7B3-C98F2FF14F74</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="4D7A169F-CFAF-A67E-98AF-E6F099C2B974" name="pojisteni PK">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:28:00 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A47B7351-6465-D2C9-5D31-1071E8A4BD3E</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

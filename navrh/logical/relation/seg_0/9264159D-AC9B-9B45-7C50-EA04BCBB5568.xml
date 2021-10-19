@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="dluhy_pac_splatky" directorySegmentName="seg_0" id="9264159D-AC9B-9B45-7C50-EA04BCBB5568">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:06:42 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<sourcePk>F027ED2C-7E55-905E-E7DF-A79BB1448D76</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>BD7269C2-B2E4-4323-BBFE-BB259EDE63B7</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>79F01E0F-A1C2-2EB1-3A7D-D36C9650C9F4</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

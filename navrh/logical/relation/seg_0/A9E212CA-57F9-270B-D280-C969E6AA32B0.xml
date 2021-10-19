@@ -1,0 +1,19 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pacienti_pojistky" directorySegmentName="seg_0" id="A9E212CA-57F9-270B-D280-C969E6AA32B0">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:31:27 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<sourcePk>CFDAB7B1-351D-2E49-51E5-AB739C427573</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>56690C84-3EB8-4B75-0700-4CBA0C8CD2E6</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>7D31E074-AE69-1CA0-F9EE-4249305D3FF2</targetEntity>
+<transferable>true</transferable>
+<deleteRule>CASCADE</deleteRule>
+</Relation>

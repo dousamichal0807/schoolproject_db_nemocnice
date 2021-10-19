@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="79F01E0F-A1C2-2EB1-3A7D-D36C9650C9F4" name="splatky_dluhu_pac">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:04:48 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_spl" id="9D14CA7A-C2FE-CC37-3018-625210F517A1">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:05:01 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="spl_castka" id="8A76FCE5-8E4A-6396-2F58-E1DCEAB8A558">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:05:17 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT043</logicalDatatype>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,10,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum_splatky" id="3E757C58-08E1-415E-176B-14B7FA96A1B1">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:05:54 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_dlu" id="374F8F34-4046-ABEA-0D5A-B3C27436A071">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:06:42 UTC</createdTime>
+<generatorID>9264159D-AC9B-9B45-7C50-EA04BCBB5568</generatorID>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<referedAttribute>96CC7637-F530-6EAB-63A0-6391CA677F38</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F4B38F47-8E69-3308-50EE-75E358932CBC" name="splatky_dluhu_pac PK">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 07:06:27 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>9D14CA7A-C2FE-CC37-3018-625210F517A1</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

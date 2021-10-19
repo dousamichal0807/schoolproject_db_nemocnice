@@ -1,0 +1,85 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="92B7D953-36DD-CB56-68E4-F83277F23C97" name="zazn_diagnoz">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:48:37 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_zazn" id="B11F769D-19ED-82C0-458B-BFF4FAB9E2B6">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:48:49 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pac" id="EA4746FF-3540-9543-E76F-289FD9E159E9">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:50:11 UTC</createdTime>
+<generatorID>CB79F8FC-BFB8-6D66-F93D-3F6D8F3D1C77</generatorID>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<referedAttribute>B4A9D0F3-5183-FAD3-5DED-EC959353CB81</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_diag" id="161FF171-57B8-CAA7-E2C9-B6CD887C3D64">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:49:52 UTC</createdTime>
+<generatorID>96192DA6-85FA-DFBF-AFA1-A0876D773500</generatorID>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<referedAttribute>60A1B82E-7C34-2674-8464-D78CF706892C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="datum_urceni" id="72EC372D-3B86-72EC-82EF-A00C3DDF7E1D">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:49:07 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B7521746-CB5D-B292-F636-41435F974033" name="zazn_diagnoz PK">
+<createdBy>dousa2</createdBy>
+<createdTime>2021-10-12 06:49:33 UTC</createdTime>
+<ownerDesignName>navrh</ownerDesignName>
+<engineerTo>
+<item key="7165B52D-DD42-4E37-25E3-D21FAC86DEBA" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B11F769D-19ED-82C0-458B-BFF4FAB9E2B6</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
