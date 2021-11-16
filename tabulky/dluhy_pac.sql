@@ -1,11 +1,11 @@
 create table dluhy_pac (
 -- Evidence dluhů pacientů, kdo, za co a jakou částku dluží
     
-    id_dl_pac int primary key auto_increment,
+    id_dl_pac int unsigned primary key auto_increment,
     -- ID dluhu
     -- umělý, automaticky generovaný primární klíč
 
-    id_pac int not null,
+    id_pac int unsigned not null,
     -- cizí klíč odkazující na určitého pacienta
     -- určuje, kterého pacienta se dluh týká
 

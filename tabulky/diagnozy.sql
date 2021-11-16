@@ -18,7 +18,7 @@ create table diagnozy (
 
 alter table diagnozy
 add constraint diagnozy_kod_check
-check(kod like '[A-Z][0-9]{2}\.[0-9]{1,2}');
+check(kod regexp '[A-Z][0-9]{2}\.[0-9]{1,2}');
 
 alter table diagnozy
 add constraint diagnozy_kod_unique

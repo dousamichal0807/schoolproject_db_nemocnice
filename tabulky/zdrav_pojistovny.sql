@@ -1,7 +1,7 @@
 create table zdrav_pojistovny (
 -- Tabulka pro evidenci zdravotních pojišťoven v ČR
 
-    id_zdr_pojistovny int unsigned primary key auto_increment,
+    id_zdr_pvn int unsigned primary key auto_increment,
     -- umělý, automaticky generovaný cizí klíč
 
     kod smallint not null,

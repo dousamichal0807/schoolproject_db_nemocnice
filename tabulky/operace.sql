@@ -1,29 +1,48 @@
-create table Operace(
+create table operace (
 -- Evidence všech operací
 
-	id_operace int unsigned primary key auto_increment,
+	id_op int unsigned primary key auto_increment,
 	-- umělý, automaticky generovaný primárný klíč 
     
-	id_pacient int references pacienti(id_pac) not null,
-    -- foreign key pacienta
+	id_pac int unsigned not null,
+    -- pacient, který zákrok podstoupil
+	-- cizí klíč odkazující jednoho pacienta
     
-	id_vykon int references Druh_oper_vykon(id_druhVyk) not null,
-    -- foreign key operačního výkonu
+	id_dr_op_vyk int unsigned not null,
+    -- druh výkonu, který pacient podstoupil
     
 	zacatek datetime not null, 
-    -- datum a čas začátku operace
+    -- datum a čas, kdy operace začala
 	
     konec datetime not null,
-    -- datum a čas začátku operace
+    -- datum a čas, kdy operace skončila
     
-	krevni_ztraty decimal not null, 
+	krevni_ztraty decimal(1, 3) not null, 
     -- krevní ztráty pacienta při operaci (litry)
     
-	popis_operace nvarchar(200)
+	popis ntext not null
 	-- popis celé operace, jak probíhala apod.
-    -- rozsah 3 až 200 znaků
+    -- rozsah min. 50 znaků
 );
 
-alter table Operace
-add constraint operace_popis
-check(length(popis_operace) > 3);
+alter table operace
+add constraint operace_id_pac_fk
+foreign key (id_pac)
+references pacienti(id_pac);
+
+alter table operace
+add constraint operace_id_dr_op_vyk_fk
+foreign key (id_dr_op_vyk)
+references druhy_oper_vyk(id_dr_op_vyk);
+
+alter table operace
+add constraint operace_zac_kon_check
+check(zacatek < konec);
+
+alter table operace
+add constraint operace_krevni_ztraty_check
+check(krevni_ztraty >= 0);
+
+alter table operace
+add constraint operace_popis_check
+check(length(popis_operace) >= 50);

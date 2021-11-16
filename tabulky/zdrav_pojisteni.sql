@@ -1,14 +1,14 @@
 create table zdrav_pojisteni (
 -- Tabulka obsahující data o sjednaných zdravotních pojištění pacientů
 
-    id_zdr_pojisteni int primary key auto_increment,
+    id_zdr_pst int primary key auto_increment,
     -- umělý, automaticky generovaný primární klíč
     
     id_pac int not null references pacienti(id_pac),
     -- pacient, který má (měl) konkrétní zdravotní pojištění sjednáno
     -- cizí klíč
 
-    id_zdr_pojistovny int not null references zdrav_pojistovny(id_zdr_pojistovny),
+    id_zdr_pvn int not null references zdrav_pojistovny(id_zdr_pvn),
     -- zdravotní pojišťovna, která pojištění poskytuje (poskytovala)
     -- cizí klíč
 

@@ -1,27 +1,54 @@
-use nemocnice ;
-
 create table pobyty_pacienta (
-id_pob int primary key auto_increment,
-/*umělý, automaticky generovaný primární klíč */
-pacient int not null,
-/*fk odkaz na pacienta prijmuteho do pece*/
-prijm_lekar int not null,
-/*fk odkaz na tabulku lekari*/
-osetr_lekar int not null,
-/*fk odkaz na tabulku lekari*/
-zak_diagnoza int not null,
-/*fk odkaz na tabulku diagnozy*/
-dat_prijm datetime not null,
-/*Datum prijeti pacienta do pece*/
-dat_propus datetime not null,
-/*fdatum propusteni pacienta z pece*/
-foreign key (prijm_lekar) references lekari(id_lekar),
-foreign key (osetr_lekar) references lekari(id_lekar),
-foreign key (zak_diagnoza)references diagnozy(id_diag),
-foreign key (pacient)references pacienti(id_pac)
-);
+-- Evidence pobytů pacienta
 
+    id_pob int unsigned primary key auto_increment,
+    -- umělý, automaticky generovaný primární klíč
+
+    id_pac int unsigned not null,
+    -- určuje pacienta, který byl přimut do péče
+    -- cizí klíč odkazující konkrétního pacienta
+
+    id_prijm_lek int unsigned not null,
+    -- určuje lékaře, který pacienta přijmul
+    -- cizí klíč odkazující konrétního lékaře
+
+    id_osetr_lek int unsigned not null,
+    -- určuje lékaře, který pacienta ošetřuje (ošetřující lékař)
+    -- cizí klíč odkazující konrétního lékaře
+
+    id_zakl_diag int not null,
+    -- určuje základní diagnózu
+    -- diagnóza, kvůli které byl pacient přijmut k hospitalizaci
+    -- cizí klíč odkazující konrétní diagnózu
+
+    dat_cas_prijem datetime not null,
+    -- datum a čas, kdy byl pacient přijmut
+
+    dat_cas_propus datetime null
+    -- datum a čas, kdy byl pacient propuštěn z nemocnice
+    -- musí být pozdější než datum a čas příjmu
+);
 
 alter table pobyty_pacienta
 add constraint check_dat_pob
-check (dat_propus>= dat_prijm)
+check (dat_prijem < dat_propus);
+
+alter table pobyty_pacienta
+add constraint pobyty_pacienta_id_pac_fk
+foreign key (id_pac)
+references pacienti(id_pac);
+
+alter table pobyty_pacienta
+add constraint pobyty_pacienta_id_prijm_lek_fk
+foreign key (id_prijm_lek)
+references zamestananci(id_zam);
+
+alter table pobyty_pacienta
+add constraint pobyty_pacienta_id_osetr_lek_fk
+foreign key (id_osetr_lek)
+references zamestananci(id_zam);
+
+alter table pobyty_pacienta
+add constraint pobyty_pacienta_id_zakl_diag_fk
+foreign key (id_zakl_diag)
+references diagnozy(id_diag);

@@ -2,29 +2,32 @@ create table pacienti (
 -- Tabulka obsahující data o pacientech
     
     id_pac int unsigned primary key auto_increment,
-    -- umělý primární klíč
-    -- auto_increment funguje v MySQL
+    -- umělý, automaticky generovaný primární klíč
 
     prijm nvarchar(100) not null,
     -- příjmení pacienta
-    -- minimální délka: 2 znaky
-    -- maximální délka: 100 znaků
+    -- rozsah: 2 až 100 znaků
 
     jmeno nvarchar(100) not null,
     -- jméno, příp. jména pacienta
-    -- minimální délka: 2 znaky
-    -- maximální délka: 100 znaků
+    -- rozsah: 2 až 100 znaků
 
     rod_prijm nvarchar(100) null,
     -- příjmení pacienta
     -- nepovinné, pokud se příjmení neměnilo
-    -- minimální délka: 2 znaky
-    -- maximální délka: 100 znaků
+    -- rozsah: 2 až 100 znaků
 
     rod_cis varchar(15) not null,
     -- rodné číslo pacienta
-    -- není omezeno check constraintem, protože pacient může být z jiné země, kde
-    --   mají obdobný identifikátor zcela jiného formátu
+    -- není omezeno formátem, protože pacient může být z jiné země, kde mají obdobný
+    -- identifikátor zcela jiného formátu
+
+    dat_nar date not null,
+    -- datum narození pacienta
+
+    dat_umr date null,
+    -- datum úmrtí pacienta
+    -- pokud je pacient živ, uvede se jako hodnota `null`
 
     zeme_puv varchar(3) not null
     -- země původu pacienta
@@ -54,4 +57,4 @@ check(length(rod_prijm) >= 2);
 
 alter table pacienti
 add constraint pacienti_zeme_puv_check
-check(zeme_puv like '[A-Z]{1,3}');
+check(zeme_puv regexp '[A-Z]{1,3}');
